@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balogun Emmanuel Winner | Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .project-unit:hover .project-overlay {
+            opacity: 1;
+        }
+        .resume-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .resume-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-zinc-900 overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-tighter uppercase">
+                BEW<span class="font-light text-zinc-400">Designs</span>
+            </div>
+            <div class="hidden md:flex space-x-10 text-sm font-medium uppercase tracking-widest">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden" onclick="toggleMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-zinc-100 p-6 flex flex-col space-y-4 text-center uppercase tracking-widest text-sm">
+            <a href="#home" onclick="toggleMenu()">Home</a>
+            <a href="#projects" onclick="toggleMenu()">Projects</a>
+            <a href="#about" onclick="toggleMenu()">About</a>
+            <a href="#resume" onclick="toggleMenu()">Resume</a>
+            <a href="#contact" onclick="toggleMenu()">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                    Designing <br><span class="text-zinc-400">Human</span> Spaces.
+                </h1>
+                <p class="text-lg text-zinc-600 mb-8 max-w-md">
+                    Balogun Emmanuel Winner is an architect dedicated to creating sustainable, functional, and aesthetically profound environments.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="bg-zinc-900 text-white px-8 py-4 text-sm uppercase tracking-widest hover:bg-zinc-800 transition">View Portfolio</a>
+                    <a href="#resume" class="border border-zinc-900 px-8 py-4 text-sm uppercase tracking-widest hover:bg-zinc-50 transition">Experience</a>
+                </div>
+            </div>
+            <div class="reveal delay-200">
+                <div class="aspect-[4/5] bg-zinc-100 overflow-hidden relative">
+                    <img src="Elwins.png" alt="Principal Architect">
+                    <svg viewBox="0 0 400 500" class="w-full h-full object-cover">
+                        <rect width="400" height="500" fill="#f4f4f5"/>
+                        <path d="M50 450 L200 50 L350 450 Z" fill="none" stroke="#d4d4d8" stroke-width="2"/>
+                        <line x1="50" y1="450" x2="350" y2="450" stroke="#d4d4d8" stroke-width="2"/>
+                        <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="14" fill="#a1a1aa" opacity="0.5">PRINCIPAL ARCHITECT</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="py-24 px-6 bg-zinc-50">
+
+    <div class="max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+            <div>
+                <h2 class="text-sm uppercase tracking-widest text-zinc-400 mb-2">
+                    Portfolio Units
+                </h2>
+
+                <h3 class="text-4xl font-bold text-zinc-900">
+                    Integrated Projects
+                </h3>
+            </div>
+
+            <p class="text-zinc-500 max-w-xs text-sm mt-4 md:mt-0">
+                Each project exists as a standalone architectural narrative.
+            </p>
+        </div>
+
+        <div class="space-y-28">
+
+            <!-- ================= PROJECT 1 ================= -->
+
+            <div class="reveal">
+
+                <div class="project-carousel relative overflow-hidden rounded-2xl bg-black">
+
+                    <div class="slides flex transition-transform duration-500 ease-in-out">
+
+                        <img src="Cover.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="SP.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="FP.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="RE.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="LE.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="Materials.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="Section.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="Schedule.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="Sewerage.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="SL.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="AE.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="CA1.jpg" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="CA2.jpg" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                        <img src="CA3.jpg" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                    </div>
+
+                    <!-- Buttons -->
+
+                    <button class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ‹
+                    </button>
+
+                    <button class="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ›
+                    </button>
+
+                    <!-- Dots -->
+
+                    <div class="dots absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+
+                </div>
+
+                <div class="mt-6 flex justify-between items-start">
+
+                    <div>
+                        <h4 class="text-2xl font-bold uppercase tracking-tight">
+                            The HOFESH Auditorium
+                        </h4>
+
+                        <p class="text-zinc-500 text-sm">
+                            2025
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================= PROJECT 2 ================= -->
+
+            <div class="reveal">
+
+                <div class="project-carousel relative overflow-hidden rounded-2xl bg-black">
+
+                    <div class="slides flex transition-transform duration-500 ease-in-out">
+
+                        <img src="SP1.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="AP.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="FP1.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="RP.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="Right.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="Left.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="Rear.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                    </div>
+
+                    <button class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ‹
+                    </button>
+
+                    <button class="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ›
+                    </button>
+
+                    <div class="dots absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+
+                </div>
+
+                <div class="mt-6">
+                    <h4 class="text-2xl font-bold uppercase tracking-tight">
+                        The TPL Project
+                    </h4>
+                </div>
+
+            </div>
+
+            <!-- ================= PROJECT 3 ================= -->
+
+            <div class="reveal">
+
+                <div class="project-carousel relative overflow-hidden rounded-2xl bg-black">
+
+                    <div class="slides flex transition-transform duration-500 ease-in-out">
+
+                        <img src="1.1.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="2.2.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="3.3.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="4.4.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="5.5.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="6.6.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="7.7.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="8.8.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="9.9.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                    </div>
+
+                    <button class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ‹
+                    </button>
+
+                    <button class="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ›
+                    </button>
+
+                    <div class="dots absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+
+                </div>
+
+                <div class="mt-6">
+                    <h4 class="text-2xl font-bold uppercase tracking-tight">
+                        A 3 Bedroom Bungalow
+                    </h4>
+                </div>
+
+            </div>
+
+            <!-- ================= PROJECT 4 ================= -->
+
+            <div class="reveal">
+
+                <div class="project-carousel relative overflow-hidden rounded-2xl bg-black">
+
+                    <div class="slides flex transition-transform duration-500 ease-in-out">
+
+                        <img src="1.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="2.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="3.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="4.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="5.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="6.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="7.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+                        <img src="8.png" class="w-full h-[550px] object-cover flex-shrink-0 lightbox-trigger">
+
+                    </div>
+
+                    <button class="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ‹
+                    </button>
+
+                    <button class="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/60 hover:bg-black text-white w-12 h-12 rounded-full text-2xl transition">
+                        ›
+                    </button>
+
+                    <div class="dots absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20"></div>
+
+                </div>
+
+                <div class="mt-6">
+                    <h4 class="text-2xl font-bold uppercase tracking-tight">
+                        A 3 Bedroom Duplex
+                    </h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<script>
+
+document.querySelectorAll('.project-carousel').forEach((carousel) => {
+
+    const slides = carousel.querySelector('.slides');
+    const images = carousel.querySelectorAll('img');
+
+    const nextBtn = carousel.querySelector('.next-btn');
+    const prevBtn = carousel.querySelector('.prev-btn');
+
+    const dotsContainer = carousel.querySelector('.dots');
+
+    let currentIndex = 0;
+
+    images.forEach((_, index) => {
+
+        const dot = document.createElement('button');
+
+        dot.classList.add(
+            'w-3',
+            'h-3',
+            'rounded-full',
+            'bg-white/50'
+        );
+
+        if(index === 0){
+            dot.classList.add('bg-white');
+        }
+
+        dotsContainer.appendChild(dot);
+
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+
+    });
+
+    const dots = dotsContainer.querySelectorAll('button');
+
+    function updateSlider(){
+
+        slides.style.transform =
+            `translateX(-${currentIndex * 100}%)`;
+
+        dots.forEach(dot => {
+            dot.classList.remove('bg-white');
+            dot.classList.add('bg-white/50');
+        });
+
+        dots[currentIndex].classList.remove('bg-white/50');
+        dots[currentIndex].classList.add('bg-white');
+
+    }
+
+    nextBtn.addEventListener('click', () => {
+
+        currentIndex++;
+
+        if(currentIndex >= images.length){
+            currentIndex = 0;
+        }
+
+        updateSlider();
+
+    });
+
+    prevBtn.addEventListener('click', () => {
+
+        currentIndex--;
+
+        if(currentIndex < 0){
+            currentIndex = images.length - 1;
+        }
+
+        updateSlider();
+
+    });
+
+    // Swipe Support
+
+    let startX = 0;
+
+    carousel.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+
+        let endX = e.changedTouches[0].clientX;
+
+        if(startX - endX > 50){
+
+            currentIndex++;
+
+            if(currentIndex >= images.length){
+                currentIndex = 0;
+            }
+
+        }
+
+        if(endX - startX > 50){
+
+            currentIndex--;
+
+            if(currentIndex < 0){
+                currentIndex = images.length - 1;
+            }
+
+        }
+
+        updateSlider();
+
+    });
+
+});
+
+// Lightbox
+
+document.querySelectorAll('.lightbox-trigger').forEach((image) => {
+
+    image.addEventListener('click', () => {
+
+        const lightbox = document.createElement('div');
+
+        lightbox.className =
+            'fixed inset-0 bg-black/95 flex items-center justify-center z-50';
+
+        lightbox.innerHTML = `
+            <img src="${image.src}" class="max-w-[95%] max-h-[95%] object-contain">
+        `;
+
+        lightbox.addEventListener('click', () => {
+            lightbox.remove();
+        });
+
+        document.body.appendChild(lightbox);
+
+    });
+
+});
+
+</script>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <div class="aspect-square bg-zinc-100 flex items-center justify-center">
+                     <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="70" r="40" fill="#e4e4e7"/>
+                        <path d="M40 160 Q100 120 160 160" stroke="#e4e4e7" stroke-width="20" fill="none"/>
+                    </svg>
+                    <img src="IK.png" alt="Headshot">
+                </div>
+            </div>
+            <div class="reveal delay-200">
+                <h2 class="text-sm uppercase tracking-widest text-zinc-400 mb-2">Philosophy</h2>
+                <h3 class="text-4xl font-bold mb-6">Balogun Emmanuel Winner</h3>
+                <div class="space-y-4 text-zinc-600 leading-relaxed">
+                    <p>
+                        I believe that architecture is more than just erecting buildings; it is about sculpting experiences. With a background in architectural composition, design and detailing and artistic expression, my approach balances the pragmatic needs of space with the emotional needs of those who inhabit it.
+                    </p>
+                    <p>
+                        Every line drawn is a commitment to sustainability. I leverage local materials and passive design strategies to ensure that each project leaves a positive footprint on both the skyline and the environment.
+                    </p>
+                </div>
+                
+                <div class="mt-10 grid grid-cols-2 gap-6 border-t border-zinc-100 pt-8">
+                    <div>
+                        <h4 class="font-bold text-sm uppercase mb-2">Education</h4>
+                        <p class="text-sm text-zinc-500">B.Tech Architecture,<br>Federal University of Technology, Minna</p>
+                    </div>
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="py-24 px-6 bg-zinc-50 border-y border-zinc-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="reveal text-center mb-16">
+                <h2 class="text-sm uppercase tracking-widest text-zinc-400 mb-2">Professional Path</h2>
+                <h3 class="text-4xl font-bold mb-4 text-zinc-900">Curriculum Vitae</h3>
+            </div>
+            
+            <div class="resume-card bg-white p-8 md:p-12 shadow-sm border border-zinc-100 flex flex-col md:flex-row items-center justify-between reveal">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
+                    <h4 class="text-xl font-bold uppercase mb-2">Full CV / Portfolio Catalog</h4>
+                    <p class="text-zinc-500 text-sm max-w-sm">Detailed breakdown of professional experiences and software proficiency (BIM/CAD).</p>
+                </div>
+                <!-- Resume Download Link -->
+                <a href="CV.pdf" download="BalogunEmmanuelWinner_CV.pdf" class="...">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span>Download Resume (PDF)</span>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 mt-16 reveal delay-200">
+                <div>
+                    <h5 class="text-xs uppercase font-bold text-zinc-400 mb-4 tracking-widest">Core Skills</h5>
+                    <ul class="text-sm text-zinc-600 space-y-2">
+                       <li>AutoCAD</li>
+                        <li>Google SketchUp</li>
+                        <li>Sustainability Analysis</li>
+                        <li>Communication</li>
+                        <li>Client Retention</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs uppercase font-bold text-zinc-400 mb-4 tracking-widest">Experience</h5>
+                    <ul class="text-sm text-zinc-600 space-y-2">
+                        <li>Consultancy</li>
+                        <li>Site Supervision</li>
+                        <li>Design & Construction</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xs uppercase font-bold text-zinc-400 mb-4 tracking-widest">Expertise</h5>
+                    <ul class="text-sm text-zinc-600 space-y-2">
+                        <li>Residential</li>
+                        <li>Public/Religious</li>
+                        <li>Institutional</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 bg-zinc-900 text-white">
+        <div class="max-w-3xl mx-auto text-center reveal">
+            <h2 class="text-sm uppercase tracking-widest text-zinc-500 mb-2">Get in touch</h2>
+            <h3 class="text-4xl md:text-5xl font-bold mb-12">Let's build something exceptional together.</h3>
+            
+            <form id="contact-form" class="space-y-6 text-left">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" required placeholder="FULL NAME" class="bg-transparent border-b border-zinc-700 py-4 w-full focus:outline-none focus:border-white transition placeholder:text-zinc-600">
+                    <input type="text" required placeholder="WhatsApp Number" class="bg-transparent border-b border-zinc-700 py-4 w-full focus:outline-none focus:border-white transition placeholder:text-zinc-600">
+                    <input type="email" required placeholder="EMAIL ADDRESS" class="bg-transparent border-b border-zinc-700 py-4 w-full focus:outline-none focus:border-white transition placeholder:text-zinc-600">
+                </div>
+                <textarea rows="4" placeholder="PROJECT OVERVIEW" class="bg-transparent border-b border-zinc-700 py-4 w-full focus:outline-none focus:border-white transition placeholder:text-zinc-600"></textarea>
+                <div class="pt-6">
+                    <button type="submit" class="bg-white text-black px-12 py-4 text-sm font-bold uppercase tracking-widest hover:bg-zinc-200 transition">Send Message</button>
+                </div>
+            </form>
+            
+            <div id="form-feedback" class="hidden mt-6 p-4 bg-green-900/20 text-green-400 border border-green-900/50">
+                Thank you! Your message has been received. I will get back to you shortly.
+            </div>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function() {
+
+    setTimeout(function() {
+
+        window.location.href = "https://wa.me/2348157106675?text=Hello%20BEW%20Designs,%20I%20just%20submitted%20a%20project%20inquiry%20through%20your%20website%20and%20I%20would%20love%20to%20discuss%20my%20project%20further.";
+
+    }, 1000);
+
+});
+</script>
+            <div class="mt-20 pt-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center text-zinc-500 text-sm">
+                <p>Based in Niger state, Nigeria. Available globally.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-xs text-zinc-400 uppercase tracking-widest bg-zinc-950">
+        &copy; 2026 Balogun Emmanuel Winner. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Reveal on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('form-feedback').classList.remove('hidden');
+        });
+    </script>
+    
+    
+</body>
+</html>
+
